@@ -38,7 +38,6 @@ export const ReferalForm = () => {
                             console.log("Submitting Form Values:", values);
                             handleSubmitDetails();
                             setSubmitting(false);
-                            handleClose();
                         }}
                     >
                         {({ errors, touched, handleChange, handleBlur, values }) => (

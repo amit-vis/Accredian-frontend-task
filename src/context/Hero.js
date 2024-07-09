@@ -22,7 +22,7 @@ export const HeroProvider = ({children})=>{
       const handleSubmitDetails = async () => {
         try {
             const { referrerName, referrerEmail, refereeName, refereeEmail } = referalDetails;
-            const response = await fetch('/create-referal', {
+            const response = await fetch('https://accredian-backend-task-x6sa.onrender.com/create-referal', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -44,6 +44,7 @@ export const HeroProvider = ({children})=>{
                     refereeEmail:"",
                     refereeName:""
                 })
+                handleClose();
             } else {
                 const errorData = await response.json();
                 toast.error(errorData.message)
